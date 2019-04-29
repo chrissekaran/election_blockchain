@@ -11,7 +11,7 @@ class Form extends React.Component {
           <label>Select Candidate</label>
           <select ref={(input) => this.candidateId = input}>
             {this.props.candidates.map((candidate, i) => {
-              return <option value={candidate.id}>{candidate.name}</option>
+              return <option key={candidate.id} value={candidate.id}>{candidate.name}</option>
             })}
           </select>
         </div>
